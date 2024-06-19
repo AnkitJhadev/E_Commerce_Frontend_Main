@@ -103,13 +103,13 @@ export default function ProductList() {
     <div className="bg-white">
       <div>
         {/* Mobile filter dialog */}
-        <Transition.Root show={mobileFiltersOpen} as={Fragment}>
+        <Transition show={mobileFiltersOpen} as={Fragment}>
           <Dialog
             as="div"
             className="relative z-40 lg:hidden"
             onClose={setMobileFiltersOpen}
           >
-            <Transition.Child
+            <Transition
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
               enterFrom="opacity-0"
@@ -119,7 +119,7 @@ export default function ProductList() {
               leaveTo="opacity-0"
             >
               <div className="fixed inset-0 bg-black bg-opacity-25" />
-            </Transition.Child>
+            </Transition>
 
             <div className="fixed inset-0 z-40 flex">
               <Transition.Child
@@ -210,7 +210,7 @@ export default function ProductList() {
               </Transition.Child>
             </div>
           </Dialog>
-        </Transition.Root>
+        </Transition>
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
